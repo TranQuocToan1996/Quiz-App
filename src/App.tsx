@@ -63,7 +63,7 @@ const App = () => {
       <GlobalStyle />
       <Wrapper>
         <h1>React Quiz</h1>
-        {gameOver || userAnswers.length === TOTAL_QUESTION ? (
+        {!isLoading && (gameOver || userAnswers.length === TOTAL_QUESTION) ? (
           <button onClick={startTrivia} className="Start">Start</button>
         ) : null}
         {!gameOver ? <p className="score">Score: {score}</p> : null}
